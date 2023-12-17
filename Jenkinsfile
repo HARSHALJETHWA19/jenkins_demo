@@ -8,6 +8,12 @@ pipeline {
     }
 
     stages {
+        stage('Checkout') {
+            steps {
+                // Checkout code from GitHub repository
+                git branch: 'main', url: 'https://github.com/HARSHALJETHWA19/jenkins_demo'
+            }
+        }
         stage('Build') {
             steps {
                 script {
